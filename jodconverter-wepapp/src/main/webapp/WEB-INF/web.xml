@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-app_2_4.xsd"
+         version="2.4">
+
+    <display-name>JODConverter</display-name>
+    <description>JODConverter Web Service</description>
+
+    <listener>
+        <listener-class>org.artofsolving.jodconverter.web.ContextListener</listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>ServiceServlet</servlet-name>
+        <servlet-class>org.artofsolving.jodconverter.web.ServiceServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ServiceServlet</servlet-name>
+        <url-pattern>/service/*</url-pattern>
+    </servlet-mapping>
+
+</web-app>
